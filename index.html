@@ -10,7 +10,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.json">
 <title>eNscreen Pitch Tracker</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap');</style>
+
 <style>
 :root {
   --navy: #1a3a5c;
@@ -38,7 +39,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; }
-body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; overscroll-behavior: none; }
+body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; overscroll-behavior: none; }
 
 /* HEADER */
 .header { background: var(--navy); padding: 0 1.25rem; display: flex; align-items: center; justify-content: space-between; height: 54px; position: sticky; top: 0; z-index: 100; }
@@ -47,9 +48,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .logo-mark svg { width: 14px; height: 14px; }
 .logo-text { font-size: 14px; font-weight: 600; color: #e8f4fb; }
 .header-right { display: flex; gap: 8px; align-items: center; }
-.btn-nav { background: transparent; border: 1px solid rgba(91,179,216,0.4); border-radius: var(--radius-sm); padding: 6px 12px; font-size: 12px; font-family: 'DM Sans', sans-serif; color: var(--light); cursor: pointer; transition: background .15s; }
+.btn-nav { background: transparent; border: 1px solid rgba(91,179,216,0.4); border-radius: var(--radius-sm); padding: 6px 12px; font-size: 12px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--light); cursor: pointer; transition: background .15s; }
 .btn-nav:hover { background: rgba(91,179,216,0.15); }
-.btn-add { background: var(--blue); border: none; border-radius: var(--radius-sm); padding: 6px 14px; font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; color: #fff; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background .15s; }
+.btn-add { background: var(--blue); border: none; border-radius: var(--radius-sm); padding: 6px 14px; font-size: 12px; font-weight: 500; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #fff; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background .15s; }
 .btn-add:hover { background: var(--blue2); }
 
 /* MAIN */
@@ -59,7 +60,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 1.25rem; }
 .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.875rem 1rem; box-shadow: var(--shadow); }
 .stat-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px; }
-.stat-value { font-size: 24px; font-weight: 600; color: var(--navy); line-height: 1; font-family: 'DM Mono', monospace; }
+.stat-value { font-size: 24px; font-weight: 600; color: var(--navy); line-height: 1; font-family: 'DM Mono', 'SF Mono', monospace; }
 .stat-value.acc { color: var(--blue); }
 .stat-sub { font-size: 10px; color: var(--text4); margin-top: 3px; }
 
@@ -67,10 +68,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .toolbar { display: flex; gap: 8px; margin-bottom: 1.25rem; align-items: center; flex-wrap: wrap; }
 .search-wrap { position: relative; flex: 1; min-width: 160px; max-width: 280px; }
 .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 13px; height: 13px; color: var(--text4); pointer-events: none; }
-.search-input { width: 100%; padding: 7px 10px 7px 30px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
+.search-input { width: 100%; padding: 7px 10px 7px 30px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
 .search-input:focus { border-color: var(--blue); }
 .filter-wrap { display: flex; gap: 5px; flex-wrap: wrap; }
-.f-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 99px; background: var(--surface); font-size: 11px; font-family: 'DM Sans', sans-serif; color: var(--text3); cursor: pointer; transition: all .15s; white-space: nowrap; }
+.f-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 99px; background: var(--surface); font-size: 11px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text3); cursor: pointer; transition: all .15s; white-space: nowrap; }
 .f-btn:hover { border-color: var(--blue); color: var(--blue); }
 .f-btn.active { background: var(--navy); color: #e8f4fb; border-color: var(--navy); }
 .due-btn { border-color: #fca5a5; color: var(--red); background: #fef2f2; }
@@ -101,9 +102,9 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .b-pitched { background: var(--badge-pitch-bg); color: var(--badge-pitch-text); }
 .b-followup { background: var(--badge-follow-bg); color: var(--badge-follow-text); }
 .b-closed { background: var(--badge-closed-bg); color: var(--badge-closed-text); }
-.card-mrr { font-size: 10px; color: var(--text4); font-family: 'DM Mono', monospace; }
+.card-mrr { font-size: 10px; color: var(--text4); font-family: 'DM Mono', 'SF Mono', monospace; }
 
-.add-btn { width: 100%; padding: 8px; border: 1px dashed var(--border2); border-radius: var(--radius); background: transparent; color: var(--text4); font-size: 11px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all .15s; }
+.add-btn { width: 100%; padding: 8px; border: 1px dashed var(--border2); border-radius: var(--radius); background: transparent; color: var(--text4); font-size: 11px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; transition: all .15s; }
 .add-btn:hover { background: var(--surface); color: var(--blue); border-color: var(--blue); }
 .col-empty { padding: 14px 8px; text-align: center; font-size: 11px; color: var(--text4); border: 1px dashed var(--border); border-radius: var(--radius); margin-bottom: 7px; }
 
@@ -120,7 +121,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }
 .sec-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 8px; }
 .stage-pills { display: flex; gap: 5px; flex-wrap: wrap; }
-.stage-pill { padding: 5px 13px; border-radius: 99px; border: 1px solid var(--border); background: transparent; font-size: 11px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; color: var(--text3); transition: all .15s; }
+.stage-pill { padding: 5px 13px; border-radius: 99px; border: 1px solid var(--border); background: transparent; font-size: 11px; font-weight: 500; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; color: var(--text3); transition: all .15s; }
 .stage-pill:hover { border-color: var(--blue); color: var(--blue); }
 .stage-pill.sp-lead.active { background: var(--badge-lead-bg); color: var(--badge-lead-text); border-color: #93c5fd; }
 .stage-pill.sp-contacted.active { background: var(--badge-cont-bg); color: var(--badge-cont-text); border-color: #7dd3fc; }
@@ -129,16 +130,16 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .stage-pill.sp-closed.active { background: var(--badge-closed-bg); color: var(--badge-closed-text); border-color: #86efac; }
 .date-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .date-field label { font-size: 11px; color: var(--text2); display: block; margin-bottom: 4px; font-weight: 500; }
-.date-field input { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 7px 9px; font-size: 12px; font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
+.date-field input { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 7px 9px; font-size: 12px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
 .date-field input:focus { border-color: var(--blue); }
 .reminder-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; padding: 4px 10px; border-radius: 99px; margin-top: 8px; font-weight: 500; }
 .r-overdue { background: #fef2f2; color: var(--red); border: 1px solid #fca5a5; }
 .r-soon { background: #fffbeb; color: var(--orange); border: 1px solid #fcd34d; }
 .r-ok { background: var(--badge-closed-bg); color: var(--badge-closed-text); border: 1px solid #86efac; }
-textarea.notes { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 11px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--surface); resize: vertical; min-height: 70px; outline: none; transition: border-color .15s; }
+textarea.notes { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 9px 11px; font-size: 13px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); resize: vertical; min-height: 70px; outline: none; transition: border-color .15s; }
 textarea.notes:focus { border-color: var(--blue); }
 .panel-actions { display: flex; gap: 7px; margin-top: 1rem; flex-wrap: wrap; }
-.action-btn { padding: 7px 13px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); font-size: 12px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background .15s; }
+.action-btn { padding: 7px 13px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); font-size: 12px; font-weight: 500; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: background .15s; }
 .action-btn:hover { background: var(--surface2); }
 .action-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 .action-btn.danger { color: var(--red); }
@@ -151,13 +152,13 @@ textarea.notes:focus { border-color: var(--blue); }
 .modal-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 1.25rem; }
 .field { margin-bottom: 11px; }
 .field label { display: block; font-size: 11px; font-weight: 500; color: var(--text2); margin-bottom: 4px; }
-.field input, .field select { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
+.field input, .field select { width: 100%; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; font-size: 13px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); outline: none; transition: border-color .15s; }
 .field input:focus, .field select:focus { border-color: var(--blue); }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .divider-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 10px; padding-top: 12px; border-top: 1px solid var(--border); }
 .modal-footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 1.25rem; }
-.btn-cancel { padding: 7px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: transparent; color: var(--text2); font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; }
-.btn-save { padding: 7px 14px; border: none; border-radius: var(--radius-sm); background: var(--blue); color: #fff; font-size: 13px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background .15s; }
+.btn-cancel { padding: 7px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: transparent; color: var(--text2); font-size: 13px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; }
+.btn-save { padding: 7px 14px; border: none; border-radius: var(--radius-sm); background: var(--blue); color: #fff; font-size: 13px; font-weight: 500; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; cursor: pointer; transition: background .15s; }
 .btn-save:hover { background: var(--blue2); }
 
 /* TOAST */
